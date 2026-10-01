@@ -22,3 +22,6 @@ target/
 # OS
 .DS_Store
 Thumbs.db
+
+voltroute/src/main/resources/application.yaml
+voltroute/src/main/resources/application.yml
