@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:voltroute_test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
+voltroute:
+  jwt:
+    secret: dGVzdF9qd3Rfc2VjcmV0X2tleV9mb3JfdGVzdGluZ19wdXJwb3Nlc19vbmx5MTIzNDU2Nzg5MA==
+    expiration-ms: 3600000
+  external:
+    open-charge-map:
+      base-url: https://api.openchargemap.io/v3
+      api-key: test-ocm-api-key
+      connect-timeout-ms: 2000
+      read-timeout-ms: 3000

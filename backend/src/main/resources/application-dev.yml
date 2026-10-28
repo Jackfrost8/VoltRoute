@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:voltroute_db}}
+    username: ${SPRING_DATASOURCE_USERNAME:${POSTGRES_USER:postgres}}
+    password: ${SPRING_DATASOURCE_PASSWORD:${POSTGRES_PASSWORD:}}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      pool-name: VoltRouteHikariPool
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000
+      connection-timeout: 10000
+      initialization-fail-timeout: 10000 # Fails fast with clear error if connection fails
+  jpa:
+    hibernate:
+      ddl-auto: update # Non-destructive: preserves existing tables and schemas
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+# VoltRoute Application Settings
+voltroute:
+  jwt:
+    secret: ${JWT_SECRET:c3VwZXJfc2VjcmV0X2p3dF9rZXlfZm9yX3ZvbHRyb3V0ZV9sb2NhbF9kZXYxMjM0NTY3ODkw}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  external:
+    open-charge-map:
+      api-key: ${OPEN_CHARGE_MAP_API_KEY:}
+      base-url: https://api.openchargemap.io/v3
+    open-route-service:
+      api-key: ${OPENROUTESERVICE_API_KEY:}
+      base-url: https://api.openrouteservice.org
+    ml-service:
+      base-url: ${ML_SERVICE_URL:http://localhost:8000}

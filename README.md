@@ -140,9 +140,9 @@ Development is structured into independently verifiable phases documented in [`d
 * **Phase 5: Station Discovery & Open Charge Map Integration** &mdash; **COMPLETED**
 * **Phase 6: Frontend Core UI & Authentication Integration** &mdash; **COMPLETED**
 * **Phase 7: Interactive Charging Station Map & Supported Filters** &mdash; **COMPLETED**
-* **Phase 8: Route Optimization & Energy Consumption Engine** &mdash; Next Up
-* **Phase 9: Community Features, Station Reviews & User Favorites**
-* **Phase 10: AI/ML Service Integration (FastAPI, Scikit-Learn)**
+* **Phase 8: Persistent, User-Specific Charging Station Favorites** &mdash; **COMPLETED**
+* **Phase 9: Intelligent Multi-Stop EV Route Optimization & Energy Engine** &mdash; **COMPLETED**
+* **Phase 10: AI/ML Service Integration (FastAPI, Scikit-Learn)** &mdash; Planned
 * **Phase 11: End-to-End Integration, Verification & Production Hardening**
 
 For detailed architecture diagrams and data models, see [`docs/ARCHITECTURE.md`](file:///docs/ARCHITECTURE.md), [`docs/DATABASE_DESIGN.md`](file:///docs/DATABASE_DESIGN.md), [`docs/AUTHENTICATION.md`](file:///docs/AUTHENTICATION.md), [`docs/EXTERNAL_APIS.md`](file:///docs/EXTERNAL_APIS.md), and [`docs/API_DOCUMENTATION.md`](file:///docs/API_DOCUMENTATION.md).

@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:voltroute_local;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+# Local VoltRoute Configuration Placeholders
+voltroute:
+  jwt:
+    secret: ${JWT_SECRET:c3VwZXJfc2VjcmV0X2p3dF9rZXlfZm9yX3ZvbHRyb3V0ZV9sb2NhbF9kZXYxMjM0NTY3ODkw}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  external:
+    open-charge-map:
+      api-key: ${OPEN_CHARGE_MAP_API_KEY:}
+      base-url: https://api.openchargemap.io/v3
+    open-route-service:
+      api-key: ${OPENROUTESERVICE_API_KEY:}
+      base-url: https://api.openrouteservice.org
+    ml-service:
+      base-url: ${ML_SERVICE_URL:http://localhost:8000}
