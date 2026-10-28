@@ -66,8 +66,8 @@ public class OpenRouteServiceClient {
             OrsDirectionsResponse response = restClient.post()
                     .uri("/v2/directions/driving-car/geojson")
                     .header("Authorization", properties.getApiKey())
+                    .header("Accept", "application/geo+json, application/gpx+xml, img/png; charset=utf-8")
                     .contentType(MediaType.APPLICATION_JSON)
-                    .accept(MediaType.APPLICATION_JSON)
                     .body(requestBody)
                     .retrieve()
                     .body(OrsDirectionsResponse.class);

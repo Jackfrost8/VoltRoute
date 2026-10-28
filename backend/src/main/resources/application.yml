@@ -39,12 +39,12 @@ voltroute:
   external:
     open-charge-map:
       base-url: ${OPEN_CHARGE_MAP_BASE_URL:https://api.openchargemap.io/v3}
-      api-key: ${OPEN_CHARGE_MAP_API_KEY:}
+      api-key: ${OPEN_CHARGE_MAP_API_KEY:3dc94187-1aa6-4ab5-a00a-62a3594603c4}
       connect-timeout-ms: ${OPEN_CHARGE_MAP_CONNECT_TIMEOUT_MS:5000}
       read-timeout-ms: ${OPEN_CHARGE_MAP_READ_TIMEOUT_MS:10000}
     open-route-service:
       base-url: ${OPENROUTESERVICE_BASE_URL:https://api.openrouteservice.org}
-      api-key: ${OPENROUTESERVICE_API_KEY:}
+      api-key: ${OPENROUTESERVICE_API_KEY:eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjlhY2Q2ZjYxNjMyYzQ2N2E4ZGJjYTI2MjA2NGE5NzE5IiwiaCI6Im11cm11cjY0In0=}
       connect-timeout-ms: ${OPENROUTESERVICE_CONNECT_TIMEOUT_MS:5000}
       read-timeout-ms: ${OPENROUTESERVICE_READ_TIMEOUT_MS:10000}
     ml-service:

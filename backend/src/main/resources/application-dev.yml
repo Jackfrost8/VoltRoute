@@ -19,17 +19,4 @@ spring:
       hibernate:
         format_sql: true
 
-# VoltRoute Application Settings
-voltroute:
-  jwt:
-    secret: ${JWT_SECRET:c3VwZXJfc2VjcmV0X2p3dF9rZXlfZm9yX3ZvbHRyb3V0ZV9sb2NhbF9kZXYxMjM0NTY3ODkw}
-    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
-  external:
-    open-charge-map:
-      api-key: ${OPEN_CHARGE_MAP_API_KEY:}
-      base-url: https://api.openchargemap.io/v3
-    open-route-service:
-      api-key: ${OPENROUTESERVICE_API_KEY:}
-      base-url: https://api.openrouteservice.org
-    ml-service:
-      base-url: ${ML_SERVICE_URL:http://localhost:8000}
+
